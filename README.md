@@ -264,15 +264,15 @@ $$
 **Interpretasi:** Karena Gx dan Gy keduanya besar dan sama (465), magnitude juga sangat besar (~658). Nilai besar ini menunjukkan ada tepi kuat — ada perubahan drastis antara area gelap dan terang dalam patch ini, baik secara vertikal maupun horizontal.
 
 ---
-
-### 5. Normalisasi 0–255 (Aman)
+### 5.  Normalisasi Magnitude ke 0–255
+Hitung magnitude dari hasil Sobel:
 
 ```python
 magnitude = np.sqrt(gx**2 + gy**2)
 edge_norm = 255.0 * magnitude / (np.max(magnitude) + 1e-8)  # hindari pembagian nol
 edge_uint8 = np.clip(edge_norm, 0, 255).astype(np.uint8)
 ```
----
+------
 
 
 ### Output
