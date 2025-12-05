@@ -265,28 +265,28 @@ $$
 
 ---
 
-
 ### 5. 📏 Normalisasi 0–255
 
 Normalisasi dilakukan agar hasil perhitungan magnitude dapat **ditampilkan sebagai gambar** (direntangkan ke rentang piksel 0 hingga 255).
 
----
-#### 2. Formula Perhitunan
-Formula/Rumus yang digunakan untuk menskala ulang nilai magnitude tepi ($\text{edge}$) ke rentang $0$ hingga $255$ adalah:
+#### 2. Formula dan Implementasi
+
+Berikut adalah rumus normalisasi beserta contoh perhitungannya (menggunakan $\text{max\_val} = 658$):
 
 ```math
-\text{edge}_{\text{norm}} = \frac{\text{magnitude}}{\text{max\_val}} \times 255
-#### 2. Contoh Implementasi.
+\text{edge}_{\text{norm}} = \frac{\text{magnitude}}{\text{max\_val}} \times 255 = \frac{657.6}{658} \times 255 \approx 255
 ```
+
 ```math
-\text{edge}_{\text{norm}} = \frac{\text{magnitude}}{\text{max\_val}} \times 255
+\text{edge}_{\text{norm}} = \frac{\text{magnitude}}{\text{max\_val}} \times 255 = \frac{657.6}{658} \times 255 \approx 255
 ```
+
+
 
 ### Output
 
 
 <img width="327" height="502" alt="image" src="https://github.com/user-attachments/assets/a683a7b2-91d6-452c-b87f-22c492bdefc7"/>
-
 
 
 
