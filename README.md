@@ -265,15 +265,13 @@ $$
 
 ---
 
-## 5. Normalisasi 0–255
+### 5. Normalisasi 0–255 (Aman)
 
-Agar hasil edge detection terlihat sebagai gambar, maka normalisasi nilai magnitude ke rentang 0–255:
-
-edge_uint8 = cv2.normalize(magnitude, None, 0, 255, cv2.NORM_MINMAX, cv2.CV_8U)
-
-
-Artinya: patch ini mengandung tepi yang sangat kuat → hasil normalisasi mendekati 255 (putih di gambar edge output). Pixel ini akan terlihat cerah/putih di gambar hasil edge detection, menunjukkan lokasi tepi.
-
+```python
+magnitude = np.sqrt(gx**2 + gy**2)
+edge_norm = 255.0 * magnitude / (np.max(magnitude) + 1e-8)  # hindari pembagian nol
+edge_uint8 = np.clip(edge_norm, 0, 255).astype(np.uint8)
+```
 ---
 
 
