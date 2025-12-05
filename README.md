@@ -273,26 +273,20 @@ $$
 
 Normalisasi dilakukan agar hasil perhitungan magnitude dapat **ditampilkan sebagai gambar** (direntangkan ke rentang piksel 0 hingga 255).
 
-#### 1. Rumus Normalisasi
+### 5. 📏 Normalisasi 0–255
 
-Rumus yang digunakan untuk menskala ulang nilai magnitude tepi (edge) ke rentang 0 hingga 255 adalah:
+Normalisasi dilakukan agar hasil perhitungan magnitude dapat **ditampilkan sebagai gambar** (direntangkan ke rentang piksel 0 hingga 255).
 
-$$
-\text{edge}_{\text{norm}} = \frac{\text{magnitude}}{\text{max\_val}} \times 255
-$$
+---
 
-* $\text{magnitude}$: Nilai besaran tepi yang dihitung.
-* $\text{max\_val}$: Nilai **terbesar** dari magnitude di seluruh gambar.
+#### 1. Rumus dan Aplikasi Normalisasi
 
-#### 2. Contoh Aplikasi
+Rumus yang digunakan untuk menskala ulang nilai magnitude tepi ($\text{edge}$) ke rentang 0 hingga 255 adalah:
 
-Misalkan nilai magnitude terbesar ($\text{max\_val}$) yang ditemukan adalah 658. Untuk piksel dengan magnitude tertinggi (657.6):
+```math
 
-$$
+
 \text{edge}_{\text{norm}} = \frac{657.6}{658} \times 255 \approx \mathbf{255}
-$$
-
-**Hasil:** Nilai 255 menunjukkan area tersebut adalah **tepi yang sangat kuat (putih penuh)**.
 
 **Interpretasi:** Patch ini mengandung tepi yang sangat kuat → hasil normalisasi mendekati 255 (putih di gambar edge output). Pixel ini akan terlihat cerah/putih di gambar hasil edge detection, menunjukkan lokasi tepi.
 
