@@ -268,28 +268,25 @@ $$
 ---
 
 
-### 5. Normalisasi 0-255
+### 5. 📏 Normalisasi 0–255
 
 Normalisasi dilakukan agar hasil perhitungan magnitude dapat **ditampilkan sebagai gambar** (direntangkan ke rentang piksel 0 hingga 255).
 
+---
+
 #### 1. Rumus Normalisasi
 
-Rumus yang digunakan untuk menskala ulang nilai magnitude tepi (edge) ke rentang 0 hingga 255 adalah:
+Rumus yang digunakan untuk menskala ulang nilai magnitude tepi ($\text{edge}$) ke rentang $0$ hingga $255$ adalah:
 
-edge_norm = (magnitude / max_val) * 255
-
-* **magnitude**: Nilai besaran tepi yang dihitung.
-* **max_val**: Nilai terbesar dari magnitude di seluruh gambar.
-
-#### 2. Contoh Aplikasi
-
-Misalkan nilai magnitude terbesar (**max_val**) yang ditemukan adalah 658. Untuk piksel dengan magnitude tertinggi (657.6):
-
-edge_norm = (657.6 / 658) * 255 ≈ 255
-
-**Hasil:** Nilai 255 menunjukkan area tersebut adalah **tepi yang sangat kuat (putih penuh)**.
-
-**Interpretasi:** Patch ini mengandung tepi yang sangat kuat. Hasil normalisasi mendekati 255 (putih di gambar edge output). Pixel ini akan terlihat cerah/putih di gambar hasil edge detection, menunjukkan lokasi tepi.
+```math
+\text{edge}_{\text{norm}} = \frac{\text{magnitude}}{\text{max\_val}} \times 255
+Di mana:$\text{magnitude}$: Nilai besaran tepi yang dihitung.$\text{max\_val}$: Nilai terbesar dari magnitude di seluruh gambar, didefinisikan sebagai $\text{max\_val} = \max(\text{magnitude}_{\text{semua piksel}})$.2. Contoh AplikasiMisalkan nilai magnitude terbesar ($\text{max\_val}$) yang ditemukan adalah $658$. Untuk piksel dengan magnitude tertinggi ($657.6$):Cuplikan kode\text{edge}_{\text{norm}} = \frac{657.6}{658} \times 255 \approx \mathbf{255}
+Hasil: Nilai $255$ menunjukkan area tersebut adalah tepi yang sangat kuat (putih penuh).Interpretasi: Patch ini mengandung tepi yang sangat kuat. Hasil normalisasi mendekati $255$ (putih di gambar edge output). Pixel ini akan terlihat cerah/putih di gambar hasil edge detection, menunjukkan lokasi tepi.
+```````
+#### 2. Contoh Implementasi
+```math
+\text{edge}_{\text{norm}} = \frac{\text{magnitude}}{\text{max\_val}} \times 255
+```
 
 ### Output
 
