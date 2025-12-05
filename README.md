@@ -292,7 +292,6 @@ $$
 
 **Hasil:** Nilai 255 menunjukkan area tersebut adalah **tepi yang sangat kuat (putih penuh)**.
 
-
 Artinya: patch ini mengandung tepi yang sangat kuat → hasil normalisasi mendekati 255 (putih di gambar edge output). Pixel ini akan terlihat cerah/putih di gambar hasil edge detection, menunjukkan lokasi tepi.
 
 
