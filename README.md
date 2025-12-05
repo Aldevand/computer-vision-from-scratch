@@ -269,9 +269,7 @@ $$
 
 Agar hasil edge detection terlihat sebagai gambar, maka normalisasi nilai magnitude ke rentang 0–255:
 
-$$
-\text{edge\_norm} = \frac{\text{magnitude}}{\text{max\_val}} \times 255
-$$
+edge_uint8 = cv2.normalize(magnitude, None, 0, 255, cv2.NORM_MINMAX, cv2.CV_8U)
 
 
 Artinya: patch ini mengandung tepi yang sangat kuat → hasil normalisasi mendekati 255 (putih di gambar edge output). Pixel ini akan terlihat cerah/putih di gambar hasil edge detection, menunjukkan lokasi tepi.
