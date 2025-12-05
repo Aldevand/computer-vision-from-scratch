@@ -249,7 +249,7 @@ $$
 <img width="2816" height="1536" alt="Gemini_Generated_Image_e5pw97e5pw97e5pw" src="https://github.com/user-attachments/assets/eded6b57-0138-43a6-a7e1-6c7ce9a12665" />
 
 
-Note: Ilustasi diasumsikan semua bernilai sama yakni 255
+NOTE PENTING: Fokus pada proses dan alur kerjanya saja. karena nilainya terdapat sedikit kesalahan di ilustrasinya 
 
 
 
@@ -257,7 +257,9 @@ Tepi/sudut sebenarnya adalah gabungan keduanya:
 
 
 $$
+
 \text{magnitude} = \sqrt{G_x^2 + G_y^2} = \sqrt{465^2 + 465^2} = \sqrt{216225 + 216225} = \sqrt{432450} \approx 657.6
+
 $$
 
 
@@ -270,7 +272,9 @@ $$
 Agar terlihat sebagai gambar:
 
 $$
+
 \text{edge}_{\text{norm}} = \frac{\text{magnitude}}{\text{max\_val}} \times 255
+
 $$
 
 
@@ -278,7 +282,9 @@ Misalkan max_val dalam gambar adalah ~658 (nilai magnitude terbesar), maka:
 
 
 $$
+
 \text{edge}_{\text{norm}} = \frac{657.6}{658} \times 255 \approx 255
+
 $$
 
 
@@ -288,8 +294,7 @@ Artinya: patch ini mengandung tepi yang sangat kuat → hasil normalisasi mendek
 ### Output
 
 
-<img width="164" height="251" alt="image" src="https://github.com/user-attachments/assets/a683a7b2-91d6-452c-b87f-22c492bdefc7" />
-
+<img width="327" height="502" alt="image" src="https://github.com/user-attachments/assets/a683a7b2-91d6-452c-b87f-22c492bdefc7" />
 
 
 <img width="835" height="502" alt="image" src="https://github.com/user-attachments/assets/ebd75a3c-fea1-4bf1-b10f-649781313e72" />
