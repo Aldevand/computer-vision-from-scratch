@@ -10,8 +10,7 @@ Pada dasarnya, komputer melihat gambar sebagai matriks angka. Setiap angka mewak
 
 Misalnya sebuah gambar ber-shape **(1280, 853)** foto saya pribadi artinya:
 
-![Foto Petra](https://github.com/user-attachments/assets/b86ece98-d5bc-4be9-b3a3-ae11d8755f2c)
-
+<img src="https://github.com/user-attachments/assets/b86ece98-d5bc-4be9-b3a3-ae11d8755f2c" alt="Foto Petra" width="300"/>
 
 - 1280 baris piksel
 - 853 kolom piksel
