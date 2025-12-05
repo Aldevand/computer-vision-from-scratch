@@ -37,9 +37,6 @@ Convolution adalah cara komputer membaca gambar dengan memakai pola kecil bernam
 
 Setiap kali kernel berada di satu posisi:
 
-<img width="2816" height="1536" alt="Gemini_Generated_Image_e5pw97e5pw97e5pw" src="https://github.com/user-attachments/assets/eded6b57-0138-43a6-a7e1-6c7ce9a12665" />
-
-
 1. Ambil pixel-pixel yang tertutup kernel
 2. Kalikan satu per satu dengan isi kernel
 3. Jumlahkan hasilnya
@@ -249,6 +246,9 @@ $$
 
 ### 4. Magnitude Edge (Gabungan X & Y)
 
+<img width="2816" height="1536" alt="Gemini_Generated_Image_e5pw97e5pw97e5pw" src="https://github.com/user-attachments/assets/eded6b57-0138-43a6-a7e1-6c7ce9a12665" />
+
+
 Tepi/sudut sebenarnya adalah gabungan keduanya:
 
 $$
@@ -277,12 +277,10 @@ Artinya: patch ini mengandung tepi yang sangat kuat → hasil normalisasi mendek
 
 
 ### Output
-<img width="327" height="502" alt="image" src="https://github.com/user-attachments/assets/a683a7b2-91d6-452c-b87f-22c492bdefc7" />
+
+<img width="164" height="251" alt="image" src="https://github.com/user-attachments/assets/a683a7b2-91d6-452c-b87f-22c492bdefc7" />
 
 <img width="835" height="502" alt="image" src="https://github.com/user-attachments/assets/ebd75a3c-fea1-4bf1-b10f-649781313e72" />
-
-
-
 
 ---
 
