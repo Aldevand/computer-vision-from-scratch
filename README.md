@@ -265,22 +265,18 @@ $$
 
 ---
 
-### 5. 📏 Normalisasi 0–255
+## 5. Normalisasi 0–255
 
-Normalisasi dilakukan agar hasil perhitungan magnitude dapat **ditampilkan sebagai gambar** (direntangkan ke rentang piksel 0 hingga 255).
+Agar hasil edge detection terlihat sebagai gambar, maka normalisasi nilai magnitude ke rentang 0–255:
 
-#### 2. Formula dan Implementasi
+$$
+\text{edge\_norm} = \frac{\text{magnitude}}{\text{max\_val}} \times 255
+$$
 
-Berikut adalah rumus normalisasi beserta contoh perhitungannya (menggunakan $\text{max\_val} = 658$):
 
-```math
-\text{edge}_{\text{norm}} = \frac{\text{magnitude}}{\text{max\_val}} \times 255 = \frac{657.6}{658} \times 255 \approx 255
-```
+Artinya: patch ini mengandung tepi yang sangat kuat → hasil normalisasi mendekati 255 (putih di gambar edge output). Pixel ini akan terlihat cerah/putih di gambar hasil edge detection, menunjukkan lokasi tepi.
 
-```math
-\text{edge}_{\text{norm}} = \frac{\text{magnitude}}{\text{max\_val}} \times 255 = \frac{657.6}{658} \times 255 \approx 255
-```
-
+---
 
 
 ### Output
